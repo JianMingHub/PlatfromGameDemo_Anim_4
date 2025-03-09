@@ -127,52 +127,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 3636758944142163898, guid: b58febe65a0b69243b88e318ae2a3cc3, type: 3}
   m_PrefabInstance: {fileID: 251623356}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &91779195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4437768463633407330, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
+--- !u!114 &91779201 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6988691421386114984, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
   m_PrefabInstance: {fileID: 845000934}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &91779201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91779195}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdfcf8d5d39d8974ea70688d612db497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stat: {fileID: 11400000, guid: 0abd52ba1e62426448394622c2077a1e, type: 2}
-  normalLayer: 8
-  invincibleLayer: 9
-  deadLayer: 10
-  m_anim: {fileID: 1072433391}
-  flashVfx: {fileID: 0}
-  deadVfxPb: {fileID: 0}
-  jumpingFallingMultipiler: 5
-  lowJumpingMultipiler: 5
-  sp: {fileID: 0}
-  obstacleChker: {fileID: 1912036047}
-  defaultCol: {fileID: 91779204}
-  flyingCol: {fileID: 91779203}
-  inWaterCol: {fileID: 91779202}
---- !u!70 &91779202 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 7839314388632937981, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
-  m_PrefabInstance: {fileID: 845000934}
-  m_PrefabAsset: {fileID: 0}
---- !u!70 &91779203 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 8405938797078665734, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
-  m_PrefabInstance: {fileID: 845000934}
-  m_PrefabAsset: {fileID: 0}
---- !u!70 &91779204 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2192278516351807893, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
-  m_PrefabInstance: {fileID: 845000934}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &97983767 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9143458906157228028, guid: a2102c71d38183048bd3978f85d24e58, type: 3}
@@ -1085,9 +1050,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5712376503959648710, guid: 3df12a155df646849b9cee7e9c41b12b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.448223
+      objectReference: {fileID: 0}
+    - target: {fileID: -5712376503959648710, guid: 3df12a155df646849b9cee7e9c41b12b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1214671
+      objectReference: {fileID: 0}
+    - target: {fileID: -5712376503959648710, guid: 3df12a155df646849b9cee7e9c41b12b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1606496
+      objectReference: {fileID: 0}
     - target: {fileID: 2217650714051585396, guid: 3df12a155df646849b9cee7e9c41b12b, type: 3}
       propertyPath: m_Name
       value: BrownBird
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217650714051585396, guid: 3df12a155df646849b9cee7e9c41b12b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2612273052696974103, guid: 3df12a155df646849b9cee7e9c41b12b, type: 3}
       propertyPath: m_Constraints
@@ -1194,7 +1175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5868559796734169648, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.87
+      value: 7.26
       objectReference: {fileID: 0}
     - target: {fileID: 5868559796734169648, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1232,17 +1213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5930668163149610457, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
-      propertyPath: m_Size.x
-      value: 1.490545
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4437768463633407330, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 91779201}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
 --- !u!1001 &875043966
 PrefabInstance:
@@ -1382,6 +1356,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishHoz
       objectReference: {fileID: 0}
+    - target: {fileID: 4884142492206060488, guid: d61b3677f23f5904796253da1e6687f9, type: 3}
+      propertyPath: m_Size.x
+      value: 1.404069
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884142492206060488, guid: d61b3677f23f5904796253da1e6687f9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.110926
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884142492206060488, guid: d61b3677f23f5904796253da1e6687f9, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.2020319
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884142492206060488, guid: d61b3677f23f5904796253da1e6687f9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.01584568
+      objectReference: {fileID: 0}
     - target: {fileID: 7524717716007738493, guid: d61b3677f23f5904796253da1e6687f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1482,11 +1472,6 @@ MonoBehaviour:
   deadVfxPb: {fileID: 0}
   movingDist: 4
   canRotate: 1
---- !u!95 &1072433391 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6774842453095118834, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
-  m_PrefabInstance: {fileID: 845000934}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1078389900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1499,13 +1484,29 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 465250521973549005, guid: 083f4756e9f235340901e67dec2a196a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.35586
+      objectReference: {fileID: 0}
+    - target: {fileID: 465250521973549005, guid: 083f4756e9f235340901e67dec2a196a, type: 3}
+      propertyPath: m_Size.y
+      value: 2.138151
+      objectReference: {fileID: 0}
+    - target: {fileID: 465250521973549005, guid: 083f4756e9f235340901e67dec2a196a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1774343
+      objectReference: {fileID: 0}
+    - target: {fileID: 465250521973549005, guid: 083f4756e9f235340901e67dec2a196a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03627706
+      objectReference: {fileID: 0}
     - target: {fileID: 1505825078799967089, guid: 083f4756e9f235340901e67dec2a196a, type: 3}
       propertyPath: m_Name
       value: PurpleDino
       objectReference: {fileID: 0}
     - target: {fileID: 1505825078799967089, guid: 083f4756e9f235340901e67dec2a196a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3048620738401709744, guid: 083f4756e9f235340901e67dec2a196a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2219,17 +2220,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   detectDist: 3
---- !u!114 &1912036047 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5872852662368467733, guid: 13c731f50fa52ed498f17237b3284339, type: 3}
-  m_PrefabInstance: {fileID: 845000934}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d46cbe5071b6041ad7aa959e3533ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1921387248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5336744987937257949, guid: b58febe65a0b69243b88e318ae2a3cc3, type: 3}
