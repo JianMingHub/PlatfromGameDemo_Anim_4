@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3621717714986822769}
   - component: {fileID: 2448152594513850484}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,9 +95,11 @@ GameObject:
   - component: {fileID: 1644791014435765885}
   - component: {fileID: 7818931723411548625}
   - component: {fileID: 5295432583989100805}
-  m_Layer: 0
+  - component: {fileID: 458023215752058962}
+  - component: {fileID: 689722574898238916}
+  m_Layer: 6
   m_Name: MovingPlatfrom_Green
-  m_TagString: MovePlatform
+  m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,8 +177,44 @@ CapsuleCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.010926744, y: 0.1639003}
   m_Size: {x: 3.010522, y: 0.80333453}
   m_Direction: 1
+--- !u!251 &458023215752058962
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076373676610999455}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!114 &689722574898238916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076373676610999455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8009203da9467418c6389b0191ab32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDir: 0
+  movingDist: 3
+  speed: 3
+  isOnlyUp: 0
+  isAuto: 1

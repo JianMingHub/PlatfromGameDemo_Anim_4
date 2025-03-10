@@ -129,10 +129,10 @@ namespace UDEV.PlatfromGame
             protected virtual void GotHit_Update() { }
             protected virtual void GotHit_Exit() { }
             protected virtual void Dead_Enter() {
-                // if (deadVfxPb)
-                // {
-                //     Instantiate(deadVfxPb, transform.position, Quaternion.identity);
-                // }
+                if (deadVfxPb)
+                {
+                    Instantiate(deadVfxPb, transform.position, Quaternion.identity);
+                }
                 gameObject.SetActive(false);    // ẩn con enemy đi
                 // AudioController.ins.PlaySound(AudioController.ins.enemyDead);
             }

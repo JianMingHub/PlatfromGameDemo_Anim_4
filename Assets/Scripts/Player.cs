@@ -102,7 +102,6 @@ namespace UDEV.PlatfromGame
         protected override void Dead()
         {
             if (IsDead) return;
-            base.Dead();
             ChangeState(PlayerAnimState.Dead);
         }
         private void Move(Direction dir)
@@ -267,6 +266,7 @@ namespace UDEV.PlatfromGame
             if (inWaterCol)
                 inWaterCol.enabled = collider == PlayerCollider.InWater;
         }
+       
         private void OnCollisionEnter2D(Collision2D col)
         {
             if (col.gameObject.CompareTag(GameTag.Enemy.ToString()))
@@ -278,7 +278,87 @@ namespace UDEV.PlatfromGame
                     TakeDamage(enemy.stat.damage, enemy);
                 }
             }
+            if (col.gameObject.CompareTag(GameTag.MovingPlatform.ToString()))
+            {
+
+                Debug.Log("OnCollisionEnter2D with: " + col.gameObject.name);
+                m_rb.isKinematic = true;
+                transform.SetParent(col.gameObject.transform);
+            }
         }
+        // Va chạm giữa Player và các đối tượng game khác khi vẫn còn đang va chạm
+        private void OnCollisionStay2D(Collision2D col)
+        {
+            if (col.gameObject.CompareTag(GameTag.MovingPlatform.ToString()))
+            {
+                Debug.Log("OnCollisionStay2D with: " + col.gameObject.name);
+                if(obstacleChker.IsOnGround && m_fsm.State == PlayerAnimState.Idle)
+                {
+                    m_rb.isKinematic = true;
+                    transform.SetParent(col.gameObject.transform);
+                }
+            }
+        }
+        // khi va chạm kết thúc
+        private void OnCollisionExit2D(Collision2D col)
+        {
+            if (col.gameObject.CompareTag(GameTag.MovingPlatform.ToString()))
+            {
+                Debug.Log("OnCollisionExit2D with: " + col.gameObject.name);
+                if (!obstacleChker.IsOnGround)
+                {
+                    m_rb.isKinematic = false;
+                    transform.SetParent(null);
+                }
+            }
+        }
+        // Khi va chạm với đối tượng game có kiểu là trigger
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            // khi va chạm với các đối tượng đầu nhọn, gọi hàm TakeDamage cho nhận xát thương bằng 1
+            if (col.CompareTag(GameTag.Thorn.ToString())) {
+                TakeDamage(1);
+            }
+            // khi va chạm với checkpoint (điểm bắt đầu)
+            if (col.CompareTag(GameTag.CheckPoint.ToString())){
+                // Lưu lại dữ liệu cho player
+                // GameManager.Ins.SaveCheckPoint();
+            }
+            // khi va chạm với các item
+            if (col.CompareTag(GameTag.Collectable.ToString()))
+            {
+                // Xử lý việc thu thập các item Collectable
+                Collectable collectable = col.GetComponent<Collectable>();
+                // if (collectable)
+                // {
+                //     collectable.Trigger();
+                // }
+            }
+            // khi va chạm với cửa
+            if (col.CompareTag(GameTag.Door.ToString()))
+            {
+                // Xử lý việc mở cửa trong game
+                // Door door = col.GetComponent<Door>();
+                // if (door)
+                // {
+                //     door.OpenDoor();
+
+                //     if (door.IsOpened)
+                //     {
+                //         ChangeState(PlayerAnimState.SayHello);
+                //     }
+                // }
+            }
+        }
+        // bắt va chạm trigger khi kết thúc
+        private void OnTriggerExit2D(Collider2D col)
+        {
+            // khi va chạm với vùng chết thì gọi hàm Dead()
+            if (col.CompareTag(GameTag.DeadZone.ToString())) {
+                Dead();
+            }
+        }
+
         #region FSM
             private void SayHello_Enter() { } 
             private void SayHello_Update() { 

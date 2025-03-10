@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1955429085392826193}
   - component: {fileID: -4468730853200080334}
   - component: {fileID: 1217932399612881608}
+  - component: {fileID: 5568791472592454857}
+  - component: {fileID: 384842112666976474}
+  - component: {fileID: 6810807128021554660}
   m_Layer: 11
   m_Name: PurpleBat
   m_TagString: Enemy
@@ -96,6 +99,65 @@ CapsuleCollider2D:
   m_Offset: {x: 0.28963882, y: -0.30321562}
   m_Size: {x: 1.3327116, y: 1.3327116}
   m_Direction: 0
+--- !u!114 &5568791472592454857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14441599704649501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0a7755136a5d54eb560ab9cbf0a139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 2026387822732323014}
+  flashRate: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 0.6603774, g: 0, b: 0.03875854, a: 0.627451}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &384842112666976474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14441599704649501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455340a13c96a43458856addfe6debd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disable: 0
+  detectMethod: 1
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  detectDist: 3
+--- !u!114 &6810807128021554660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14441599704649501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51d9c12d6a44c34baab1519c1c4927f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: f240fd09fce665643b277dc571b56bdb, type: 2}
+  normalLayer: 11
+  invincibleLayer: 9
+  deadLayer: 10
+  m_anim: {fileID: 202292849059367654}
+  flashVfx: {fileID: 5568791472592454857}
+  deadVfxPb: {fileID: 230938363473192516, guid: 4e725ec50032e604c9acd848ec1fccea, type: 3}
+  movingDist: 3
+  canRotate: 1
 --- !u!1 &617842697481205760
 GameObject:
   m_ObjectHideFlags: 0

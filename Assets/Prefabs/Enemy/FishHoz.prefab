@@ -117,6 +117,10 @@ GameObject:
   - component: {fileID: 7524717716007738493}
   - component: {fileID: -1612528339042507197}
   - component: {fileID: 4884142492206060488}
+  - component: {fileID: 5273807977239591735}
+  - component: {fileID: 3083709756603212187}
+  - component: {fileID: 3677191127760545458}
+  - component: {fileID: -5443616792101095195}
   m_Layer: 11
   m_Name: FishHoz
   m_TagString: Enemy
@@ -148,7 +152,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4773278208958918652}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -166,7 +170,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &4884142492206060488
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -202,3 +206,78 @@ CapsuleCollider2D:
   m_Offset: {x: 0.20203187, y: -0.015845682}
   m_Size: {x: 1.4040686, y: 1.1109258}
   m_Direction: 1
+--- !u!114 &5273807977239591735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773278208958918652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0a7755136a5d54eb560ab9cbf0a139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 8070423907312673972}
+  flashRate: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 0.6603774, g: 0, b: 0.03875854, a: 0.627451}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3083709756603212187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773278208958918652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455340a13c96a43458856addfe6debd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disable: 0
+  detectMethod: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  detectDist: 2.5
+--- !u!114 &3677191127760545458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773278208958918652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8009203da9467418c6389b0191ab32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDir: 0
+  movingDist: 2
+  speed: 0
+  isOnlyUp: 0
+  isAuto: 0
+--- !u!114 &-5443616792101095195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773278208958918652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd7d1b252117034dbb912dbbf44d6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: 337447439adb26249ba50786bb8522a7, type: 2}
+  normalLayer: 11
+  invincibleLayer: 9
+  deadLayer: 10
+  m_anim: {fileID: 3975811443269801731}
+  flashVfx: {fileID: 5273807977239591735}
+  deadVfxPb: {fileID: 230938363473192516, guid: 4e725ec50032e604c9acd848ec1fccea, type: 3}
+  movingDist: 0

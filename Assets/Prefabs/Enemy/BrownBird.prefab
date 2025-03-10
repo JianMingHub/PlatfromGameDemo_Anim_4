@@ -117,6 +117,9 @@ GameObject:
   - component: {fileID: 8638280722508481496}
   - component: {fileID: 2612273052696974103}
   - component: {fileID: -5712376503959648710}
+  - component: {fileID: 8037675406598588679}
+  - component: {fileID: -7429571502714230588}
+  - component: {fileID: 3688449845331781733}
   m_Layer: 11
   m_Name: BrownBird
   m_TagString: Enemy
@@ -202,3 +205,62 @@ CapsuleCollider2D:
   m_Offset: {x: 0.12146709, y: 0.16064957}
   m_Size: {x: 1.4482234, y: 0.8839975}
   m_Direction: 1
+--- !u!114 &8037675406598588679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217650714051585396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0a7755136a5d54eb560ab9cbf0a139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 395187615491045882}
+  flashRate: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 0.6603774, g: 0, b: 0.03875854, a: 0.627451}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-7429571502714230588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217650714051585396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455340a13c96a43458856addfe6debd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disable: 0
+  detectMethod: 1
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  detectDist: 3
+--- !u!114 &3688449845331781733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217650714051585396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51d9c12d6a44c34baab1519c1c4927f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: 70a135163cb3594468b62e9a1f2af3af, type: 2}
+  normalLayer: 11
+  invincibleLayer: 9
+  deadLayer: 10
+  m_anim: {fileID: 4264772423940358266}
+  flashVfx: {fileID: 8037675406598588679}
+  deadVfxPb: {fileID: 230938363473192516, guid: 4e725ec50032e604c9acd848ec1fccea, type: 3}
+  movingDist: 3
+  canRotate: 1

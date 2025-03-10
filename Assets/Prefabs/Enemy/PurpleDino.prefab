@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 3048620738401709744}
   - component: {fileID: -6994552386173838395}
   - component: {fileID: 465250521973549005}
+  - component: {fileID: 2075835219264024531}
+  - component: {fileID: -8978005515668020614}
+  - component: {fileID: -8792182099673329961}
+  - component: {fileID: -1750059309925692430}
   m_Layer: 11
   m_Name: PurpleDino
   m_TagString: Enemy
@@ -60,7 +64,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &465250521973549005
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -96,6 +100,81 @@ CapsuleCollider2D:
   m_Offset: {x: 0.17743433, y: -0.036277056}
   m_Size: {x: 1.3558595, y: 2.1381512}
   m_Direction: 0
+--- !u!114 &2075835219264024531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505825078799967089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0a7755136a5d54eb560ab9cbf0a139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 3637120985102991603}
+  flashRate: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 0.6603774, g: 0, b: 0.03875854, a: 0.627451}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-8978005515668020614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505825078799967089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455340a13c96a43458856addfe6debd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disable: 0
+  detectMethod: 0
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  detectDist: 3
+--- !u!114 &-8792182099673329961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505825078799967089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8009203da9467418c6389b0191ab32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDir: 0
+  movingDist: 3
+  speed: 0
+  isOnlyUp: 0
+  isAuto: 0
+--- !u!114 &-1750059309925692430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505825078799967089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd7d1b252117034dbb912dbbf44d6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: 6d9633b1fb0b0ce4685bf86fde6e8106, type: 2}
+  normalLayer: 11
+  invincibleLayer: 9
+  deadLayer: 10
+  m_anim: {fileID: 7532875430167547544}
+  flashVfx: {fileID: 2075835219264024531}
+  deadVfxPb: {fileID: 230938363473192516, guid: 4e725ec50032e604c9acd848ec1fccea, type: 3}
+  movingDist: 0
 --- !u!1 &9048575008340504431
 GameObject:
   m_ObjectHideFlags: 0

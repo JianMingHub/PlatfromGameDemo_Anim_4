@@ -127,7 +127,6 @@ namespace UDEV.PlatfromGame
             Gizmos.color = Color.black;
             if (!m_isGizmHaveStartPos)
             {
-                // m_startingPos = transform.position;
                 GetMovingDest();
                 m_isGizmHaveStartPos = true;
             }

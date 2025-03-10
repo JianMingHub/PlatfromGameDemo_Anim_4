@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 5487641189345607782}
   - component: {fileID: 825379330461355908}
   - component: {fileID: 2607913280045350935}
+  - component: {fileID: 7830048948596748665}
+  - component: {fileID: 6699862383026131395}
+  - component: {fileID: -4439532034186684766}
   m_Layer: 11
   m_Name: ColorBird
   m_TagString: Enemy
@@ -96,6 +99,65 @@ CapsuleCollider2D:
   m_Offset: {x: 0.12146709, y: 0.16064957}
   m_Size: {x: 1.4482234, y: 0.8839975}
   m_Direction: 1
+--- !u!114 &7830048948596748665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907812059729277263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0a7755136a5d54eb560ab9cbf0a139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 5983234621739282282}
+  flashRate: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor: {r: 0.6603774, g: 0, b: 0.03875854, a: 0.627451}
+  OnCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6699862383026131395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907812059729277263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455340a13c96a43458856addfe6debd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disable: 0
+  detectMethod: 1
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  detectDist: 3
+--- !u!114 &-4439532034186684766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907812059729277263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51d9c12d6a44c34baab1519c1c4927f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 11400000, guid: 70a135163cb3594468b62e9a1f2af3af, type: 2}
+  normalLayer: 11
+  invincibleLayer: 9
+  deadLayer: 10
+  m_anim: {fileID: 6502155149518316213}
+  flashVfx: {fileID: 7830048948596748665}
+  deadVfxPb: {fileID: 230938363473192516, guid: 4e725ec50032e604c9acd848ec1fccea, type: 3}
+  movingDist: 3
+  canRotate: 1
 --- !u!1 &7345285011231634679
 GameObject:
   m_ObjectHideFlags: 0

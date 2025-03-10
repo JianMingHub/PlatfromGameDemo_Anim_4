@@ -94,7 +94,7 @@ namespace UDEV.PlatfromGame
 
             if(flashVfx)
             {
-                flashVfx.Flash(stat.invincibleTime);    // Kích hoạt hiệu ứng nhấp nháy nếu có.
+                flashVfx.Flash(stat.invincibleTime);    // Kích hoạt hiệu ứng nhấp nháy.
             }
         }
         protected IEnumerator StopKnockBack()
